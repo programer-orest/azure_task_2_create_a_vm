@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory=$false, ValueFromPipeline=$true)]
-    [bool]$DownloadArtifacts
+    [bool]$DownloadArtifacts=$true
 )
 
 
