@@ -171,5 +171,21 @@ if ($sshNsgRule)  {
     throw "Unable to fing network security group rule which allows SSH connection. Please check if you configured VM Network Security Group to allow connections on 22 TCP port and try again."
 }
 
+$httpNsgRule = ( $nsg.properties.securityRules | Where-Object { ($_.properties.destinationPortRange -eq '8080') -and ($_.properties.access -eq 'Allow')} ) 
+if ($sshNsgRule)  {
+    Write-Output "`u{2705} Checked if NSG has HTTP network security rule configured - OK"
+} else { 
+    Write-Output `u{1F914}
+    throw "Unable to fing network security group rule which allows HTTP connection. Please check if you configured VM Network Security Group to allow connections on 8080 TCP port and try again."
+}
+
+$response = (Invoke-WebRequest -Uri "http://$($pip.properties.dnsSettings.fqdn):8080/api/") 
+if ($response) { 
+    Write-Output "`u{2705} Checked if the web application is running - OK"
+} else {
+    throw "Unable to get a reponse from the web app. Please make sure that the VM and web application are running and try again."
+}
+
+
 Write-Output ""
 Write-Output "`u{1F973} Congratulations! All tests passed!"
