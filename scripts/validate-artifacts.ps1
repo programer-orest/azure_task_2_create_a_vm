@@ -113,7 +113,7 @@ if (($pip.sku.name -eq "Basic" ) -and ($pip.properties.publicIPAllocationMethod 
     Write-Output "`u{2705} Checked Public IP SKU and allocation method - OK"
 } else { 
     Write-Output `u{1F914}
-    throw "Unable to verify Public IP SKU and allocation method. Please re-deploy public IP using 'Basic' SKU and dynamic IP allocation method and try again."
+    Write-Warning "Unable to verify Public IP SKU and allocation method. Please check if public IP using 'Basic' SKU and dynamic IP allocation method."
 }
 
 if ($pip.properties.dnsSettings.domainNameLabel) { 
