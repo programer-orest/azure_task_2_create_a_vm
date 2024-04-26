@@ -52,7 +52,7 @@ In this task, you need to perform the following steps:
 
     3. Create and attach public IP with SKU `Basic`. Create a DNS label for the public IP. 
 
-    4. Configure VM's Network Security Group to accept network connections on 22 and 8080 TCP ports. For that, create **two separate NSG rules**.
+    4. Configure VM's Network Security Group to accept network connections on `22` and `8080` TCP ports. For that, create **two separate NSG rules**.
 
 2. Deploy the web application to the virtual machine
     
