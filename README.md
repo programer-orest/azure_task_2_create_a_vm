@@ -1,6 +1,6 @@
-# Azure VM deployment
+# Azure VM Deployment
 
-This day has come - we are deploying a cloud infrastructure! In this task, you will deploy a virtual machine and configure it to host your own web application! 
+This day has come — we are deploying a cloud infrastructure! In this task, you will deploy a virtual machine and configure it to host your own web application! 
 
 ## Prerequisites
 
@@ -45,14 +45,14 @@ In this task, you need to perform the following steps:
         - Use `UK South` Azure region
         - Set availability option to `No infrastructure redundancy`
         - Use `Standard`security type 
-        - Use `Ubuntu Server 22.04` as an operating system (publisher - `Canonical`)
+        - Use `Ubuntu Server 22.04` as an operating system (publisher — `Canonical`)
         - Use `B1s` VM size 
         - Use SSH key authentification (use your own SSH key)
         - Make sure VM is deployed **without auto-generated public IP**
 
-    3. Create and attach public IP with SKU 'Basic'. Create a DNS label for the public IP. 
+    3. Create and attach public IP with SKU `Basic`. Create a DNS label for the public IP. 
 
-    4. Configure VM's Network Security Group to accept network connections on 22 and 8080 TCP ports. For that, create **two separate NSG rules** 
+    4. Configure VM's Network Security Group to accept network connections on 22 and 8080 TCP ports. For that, create **two separate NSG rules**.
 
 2. Deploy the web application to the virtual machine
     
@@ -69,7 +69,7 @@ In this task, you need to perform the following steps:
             scp -r app/* <your-vm-username>@<your-public-ip-DNS-name>:/app
         ```
 
-    3. Connect to the virtual machine again using SSH, install pre-requirements, and configure a service for the application
+    3. Connect to the virtual machine again using SSH, install pre-requirements, and configure a service for the application:
         
         ```
             sudo apt install python3-pip
@@ -88,11 +88,11 @@ In this task, you need to perform the following steps:
 
 3. Verify that web application is running, for that, open in a web browser the following URL: `http://<your-public-ip-DNS-name>:8080`. You should see the main page of the todo app. 
 
-4. Run artifacts generation script `scripts/generate-artifacts.ps1`
+4. Run artifacts generation script `scripts/generate-artifacts.ps1`.
 
-5. Test yourself using the script `scripts/validate-artifacts.ps1`
+5. Test yourself using the script `scripts/validate-artifacts.ps1`.
 
-6. Submit the solution for a review
+6. Submit the solution for a review.
 
 7. When the solution is validated, stop the virtual machine.
    
@@ -105,14 +105,14 @@ Tasks in this module are relying on 2 PowerShell scripts:
 
 Here is how to complete tasks in this module:
 
-1. Clone task repository
+1. Clone task repository.
 
-2. Make sure you completed the steps described in the Prerequisites section
+2. Make sure you completed the steps described in the Prerequisites section.
 
-3. Complete the task described in the Requirements section 
+3. Complete the task described in the Requirements section.
 
 4. Run `scripts/generate-artifacts.ps1` to generate task artifacts. The script will update the file `artifacts.json` in this repo. 
 
-5. Run `scripts/validate-artifacts.ps1` to test yourself. If tests are failing - follow the recommendation from the test script error message to fix or re-deploy your infrastructure. When you are ready to test yourself again - **re-generate the artifacts** (step 4) and re-run tests again. 
+5. Run `scripts/validate-artifacts.ps1` to test yourself. If tests are failing — follow the recommendation from the test script error message to fix or re-deploy your infrastructure. When you are ready to test yourself again — **re-generate the artifacts** (step 4) and re-run tests again. 
 
-6. When all tests will pass - commit your changes and submit the solution for review. 
+6. When all tests will pass — commit your changes and submit the solution for review. 
