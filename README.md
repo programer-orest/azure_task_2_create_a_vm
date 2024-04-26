@@ -96,7 +96,7 @@ In this task, you need to perform the following steps:
 
 7. When the solution is validated, stop the virtual machine.
    
-## How to complete tasks in this module 
+## How to Complete Tasks in This Module 
 
 Tasks in this module are relying on 2 PowerShell scripts: 
 
