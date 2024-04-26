@@ -10,9 +10,9 @@ Before completing any task in the module, make sure that you followed all the st
 
 2. Create a resource group called *"mate-resources"* in the Azure subscription.
 
-3. In the *"mate-resources"* resource group, create a storage account (any name) and a *"task-artifacts"* container.
+3. In the mate-resources resource group, create a storage account (any name) and a task-artifacts container.
 
-4. Install [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.4) on your computer. All tasks in this module use Powershell 7.
+4. Install [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.4) on your computer. All tasks in this module use PowerShell 7.
    Execute the following command to run it in the terminal: 
     ```
     pwsh
